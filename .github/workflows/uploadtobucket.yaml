@@ -35,4 +35,4 @@ jobs:
 
       - name: copy files to S3 bucket
         run: |
-          aws s3 cp ./public/*.* s3://${{env.BUCKET_NAME}}/
+          aws s3 cp ./public/ s3://${{env.BUCKET_NAME}}/ --recursive
